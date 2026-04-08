@@ -1,0 +1,20 @@
+[
+  {
+    "id": "tr-001",
+    "title": "Null Sequence 01",
+    "description": "First signal recovered from the void. Indeterminate duration. The model was given silence and asked what it heard.",
+    "soundcloudUrl": "https://soundcloud.com/your-soundcloud-account/null-sequence-01",
+    "coverImageUrl": "https://picsum.photos/seed/tr001/600/600",
+    "date": "2025",
+    "genre": "ambient"
+  },
+  {
+    "id": "tr-002",
+    "title": "Geometric Decay (Loop)",
+    "description": "A repeating structure that refuses to resolve. Trained on the sound of slowly failing systems.",
+    "soundcloudUrl": "https://soundcloud.com/your-soundcloud-account/geometric-decay",
+    "coverImageUrl": "https://picsum.photos/seed/tr002/600/600",
+    "date": "2025",
+    "genre": "instrumental"
+  }
+]

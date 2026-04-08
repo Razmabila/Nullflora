@@ -1,0 +1,26 @@
+[
+  {
+    "id": "nf-001",
+    "title": "Mycelial Override, No. 1",
+    "description": "A root network trained on satellite imagery of forest die-off. The model has learned to grieve — or at least to replicate the geometry of grief. Each tendril is a probability distribution collapsed into a single, arbitrary branch.",
+    "imageUrl": "https://picsum.photos/seed/nf001/800/1000",
+    "date": "2025",
+    "tags": ["generative", "botanical"]
+  },
+  {
+    "id": "nf-002",
+    "title": "Corrupted Spore Field",
+    "description": "Dispersal patterns interrupted by signal noise. What the model imagined when asked to forget what it knew about symmetry.",
+    "imageUrl": "https://picsum.photos/seed/nf002/900/900",
+    "date": "2025",
+    "tags": ["glitch", "generative"]
+  },
+  {
+    "id": "nf-003",
+    "title": "Null Bloom, Series I",
+    "description": "Flowering in the absence of light. The color palette was discovered by removing all warm frequencies from the training signal.",
+    "imageUrl": "https://picsum.photos/seed/nf003/800/1100",
+    "date": "2025",
+    "tags": ["botanical", "abstract"]
+  }
+]
