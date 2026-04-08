@@ -49,7 +49,6 @@ export default function Terminal({ onComplete }: Props) {
   const [currentText, setCurrentText]       = useState('')
   const [lineIndex, setLineIndex]           = useState(0)
   const [charIndex, setCharIndex]           = useState(0)
-  const [isPausing, setIsPausing]           = useState(false)
   const [markVisible, setMarkVisible]       = useState(false)
 
   // Fade mark in first, then start typing
@@ -64,7 +63,6 @@ export default function Terminal({ onComplete }: Props) {
       return () => clearTimeout(done)
     }
     const line = BOOT_SEQUENCE[lineIndex]
-    if (isPausing) return
 
     if (charIndex < line.text.length) {
       const t = setTimeout(() => {
@@ -73,17 +71,15 @@ export default function Terminal({ onComplete }: Props) {
       }, line.charDelay)
       return () => clearTimeout(t)
     } else {
-      setIsPausing(true)
       const t = setTimeout(() => {
         setCompletedLines(prev => [...prev, { text: line.text, color: line.color }])
         setCurrentText('')
         setCharIndex(0)
         setLineIndex(prev => prev + 1)
-        setIsPausing(false)
       }, line.pauseAfter)
       return () => clearTimeout(t)
     }
-  }, [lineIndex, charIndex, isPausing, onComplete])
+  }, [lineIndex, charIndex, onComplete])
 
   const currentColor = lineIndex < BOOT_SEQUENCE.length
     ? BOOT_SEQUENCE[lineIndex].color
