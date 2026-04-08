@@ -35,10 +35,12 @@ const NAV_LINKS = [
 ]
 
 export default function HomePage() {
-  const [phase, setPhase] = useState<'terminal' | 'hero'>('terminal')
-  const [heroReady, setHeroReady] = useState(false)
+  const alreadyPlayed = typeof window !== 'undefined' && sessionStorage.getItem('nullflora_booted') === '1'
+  const [phase, setPhase] = useState<'terminal' | 'hero'>(alreadyPlayed ? 'hero' : 'terminal')
+  const [heroReady, setHeroReady] = useState(alreadyPlayed)
 
   function handleTerminalComplete() {
+    sessionStorage.setItem('nullflora_booted', '1')
     setPhase('hero')
     // Trigger staggered animations after mount
     setTimeout(() => setHeroReady(true), 50)
